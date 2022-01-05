@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+  }
+
+  :root {
+      --dark (insert color-scheme: ;)
+  }
+
+  nav {
+    display: flex;
+    background-color: #d8a47f;
+  }
+
+  aside {
+    flex: 30%;
+    background-color: #b9c6ae;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .sample-img {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+    border: 1px solid black;
+  }
+
+  main {
+    display: flex;
+  }
