@@ -1,26 +1,36 @@
 * {
     box-sizing: border-box;
   }
-
-  :root {
+/* This allows me to style elements using the css variable function (which i think is so cool!!) */
+:root {
     --black: black;
     --light: gainsboro;
     --pink: rgb(206, 37, 155);
+    --padding:padding: 2%;
 }
 
+/* This is the original flex container setup */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   display:flex;
-  flex-direction:column;
-  min-height:100vh;
-  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: var(--padding);
 }
-
 header {
-  flex-wrap: wrap;
   background: var(--black);
   color: var(--light);
+}
+
+#container2 {
+  display:flex;
+  flex:1;
+  
+}
+.textpad {
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .alignleft {
@@ -30,38 +40,149 @@ header {
   text-align:right;
 }
 
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    float: right;
-    background-color:var(--pink);
+/* Navigation style for header flexible layout */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  background-color:var(--pink);
   }
 
-  nav a {
-    padding:20px;
-    text-decoration: none;
-    text-align:center ; 
-    color:var(--light);
-  }
- 
-  main {
-    display:flex;
-  }
-  
-  aside {
-    color: var(--light);
-    background-color: var(--pink);
-    padding: 5%;
-    flex-wrap: wrap;
-  }
-
-section {
-  padding: 2%;
-  grid-template-columns: 20vmax;
+nav a {
+  padding:20px;
+  text-decoration: none;
+  text-align:center; 
+  color:var(--light);
 }
 
-  footer {
-    text-align:left;
-    background: var(--black);
-    color: var(--light);
+.profimage {
+  height: 300px;
+  width: auto;
+}
+
+aside {
+  overflow:hidden;
+  float:left;
+  background: var(--pink);
+  width: 250px;
+  bottom: 0;
+}
+
+.asidemenu {
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align:justify ;
+  text-decoration:none;
+  color:var(--light)
+  
+  }
+
+
+section {
+    position:relative;
+    float:right;
+    flex:2;
+    flex-direction: column;
+    padding: var(--padding);
+  }
+
+/* This flex grid allows me to position my portfolio properly */
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column: 1 / 2;
+  grid-gap: 10px;
+  background-color: var(--light);
+  padding: 10px;
+}
+
+.grid > div {
+    background-color:white;
+    text-align: center;
+    padding: var(--padding);
+    font-size: 30px;
+  }
+a:active {
+  background-color: var(--pink);
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.floatleft {
+  float: left;
+}
+
+.floatright {
+  float:none;
+}
+
+.photo1 {
+  grid-column-start:1;
+  grid-column-end:3;
+  grid-area: 1 / 1 / span 1 / span 2;
+  position:relative;
+  width: 100%;
+  min-height: 200px;
+  max-height: 300px;
+  border: 1px solid --light;
+  padding:var(--padding);
+  display:block;
+
+}
+
+.photo2 {
+  flex-direction: row;
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid --light;
+  padding:var(--padding);
+  display:block;
+}
+
+  /* revisit this */
+footer {
+  text-align:left;
+  display: wrap;
+  background: var(--black);
+  color: var(--light);
+  }
+
+ /* This media query section allows my styles to adjust by screen size */
+
+  @media screen and (max-width: 768px) {
+ /* allows stacking, order for the main section and navigation */   
+    nav  {
+      order: 1;
+      flex-direction: column;
+    }
+
+    main {
+      order: 2;
+    }
+    
+    header {
+      background:var(--black)
+    }
+
+    aside {
+      order: 5;
+      background:var(--black)
+    }
+
+    section {
+      order: 4;
+    }
+
+    div {
+      flex-direction: column;
+    }
+
+
+    footer {
+      order:6;
+      background-color: var(--pink);
+    }
   }
