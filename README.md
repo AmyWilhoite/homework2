@@ -24,5 +24,5 @@ This work contains:
 ![Screenshot](./assets/Preview.png)
 
 ## Links
-* my link
-* repository
+* https://github.com/AmyWilhoite/homework2.git
+* https://github.com/AmyWilhoite/homework2
