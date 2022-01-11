@@ -3,52 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <title>My Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/reset.css"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
+  <!-- I plan to revise this site to be one large grid to have easier formatting -->
     <header>
-    <a class = "textpad"> 
-        <h1 class = "textpad">Amy Wilhoite</h1> 
-        <H2 class = "alignright">Cool Tag About Me</H2>
-          <div class= "profimage"> 
-          <img src="https://cefga.org/wp-content/uploads/2020/02/Amy-Wilhoite.jpg" height = "300px" alt = "My Image"></a>
-        </div>
-        <p class = "textpad"> paragraph more about me </p>
-    </header>
-
+      <div class ="textpad">
+        <h1>Amy Wilhoite </h1> 
+        <div class= "profimage alignleft"> <a href="https://cefga.org/wp-content/uploads/2020/02/Amy-Wilhoite.jpg/"></a><img src= "https://cefga.org/wp-content/uploads/2020/02/Amy-Wilhoite.jpg" height = "300px" alt = "My Image"></a></div>
+      </div>
+      <div class = "alignright textpad">
+        <H2>Im Learning to Code!</H2>      
+        <p> Nice to meet you! I plan to work harder to make this look more professional and build out the content better.  </p>
+      </div>
+      </header>
+<!-- this is the navigation which "jumps" to the section of the page -->
     <nav>
           <ul>
             <a href="#aboutme">About Me</a>
             <a href="#work">Work</a>
             <a href="#contact">Contact</a>
-            <a href="#resume">Resume</a>
+            <a href="#resume">Resume<a href= "https://www.linkedin.com/in/amy-w-4834435/"></a></a>
           </ul>
     </nav>
 
   <main>
     <div id="container2">
+<!-- I put the aside in a container of it's own but trouble and wish I had put this whole site in a grid-->
     <aside>
-        <h2 class = "textpad">Links to About Me</h2>
-      <p class = "textpad">
-        Im going to style this to go to the left
+        <h2 class = "textpad alignright">ABOUT ME</h2>
+      <p class = "textpad alignright">
+        This aside is in progress. I'd like to put the entire section in a div container so I cold format it to match the grid.
       </p>
+      <h2 class = "textpad alignright">WORK</h2>
       <div class = "asidemenu">
+<!-- In Progress - due to formatting issues I had I removed text so that the site looked cleaner -->
         <ul>
-            <a href="#aboutme">About Me</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
-            <a href="#resume">Resume</a>
+            <a href="#aboutme"></a>
+            <a href="#work"></a>
+            <a href="#contact"></a>
+            <a href="#resume"></a>
         </ul> 
       </div>
     </aside>
 
     <section class="textpad" alt ="work section">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reprehenderit voluptates exercitationem. Nesciunt vero, autem libero quod architecto, omnis laboriosam hic tempora in necessitatibus, molestias nihil fugit error dignissimos quo.</p>
-        <h2>Work</h2>
-        <div class="grid hover">
-          <div class="photo1" alt = "refractor project"> <a href="https://amywilhoite.github.io/homework1/">Horiseon Refractor Project</a></div>
+        <h2 id = "aboutme">About Me</h2>
+        <p>I'm a business professional who has over 20 years of experience in the private sector. I have business experience in many things but primarily business operations. I've worked with teams of developers on many different technology projects from a "client side" including CRMS, apps and websites. I hope to learn more about technology specifically development so that I can better serve businesses from an operational capacity. </p>
+        <h2 id="work">Work</h2>
+<!-- this is my grid container -->
+        <div class="grid">
+          <div class="photo1" alt = "refractor project" ><a href="https://amywilhoite.github.io/homework1/">Horiseon Refractor Project</a><img src="./assets/horiseon-homework1.png"></div>
           <div class="photo2" alt = "work history project"><a href="http://www.integrealtyco.com"> Jimdo Website </a></div>
           <div class="Photo3" alt = "refractor project"><a href="https://nautures-essentials.com"> Nature's Essentials </a></div>  
           <div class="photo4" alt = "refractor project">Project 4</div>
@@ -58,7 +64,10 @@
   </div>
   </main>
 </body>
-
-<footer class = "textpad"> 
-    <h3> Amy Wilhoite * 770.123.4567 * amywilhoite@yahoo.com </h3>
+<!-- Future i would revise this to be one large grid to make formatting easier -->
+<footer class = "textpad alignright">
+  <div class = "container alignleft">
+    <h2 id="contact">CONTACT ME</h2>
+    <h3 id="contact"> Amy Wilhoite Phone: 770.123.4567 <a href= "https://www.linkedin.com/in/amy-w-4834435/">LinkedIn</a></h3>
+  </div>
 </footer>

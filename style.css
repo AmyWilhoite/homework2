@@ -1,3 +1,5 @@
+/* I may have a little extra code in here in my attempts to get my site to work */
+
 * {
     box-sizing: border-box;
   }
@@ -18,16 +20,23 @@ body {
   min-height: 100vh;
   padding: var(--padding);
 }
+/* this is the header style */
+/* in progress still - trying to use flex to space my profile/paragraph/caption along side eachother */
+
 header {
+  display:right;
+  flex-direction: row;
   background: var(--black);
   color: var(--light);
 }
 
+/* styles container for main section */
 #container2 {
   display:flex;
   flex:1;
   
 }
+/* added this to create padding for text that was flush */
 .textpad {
   padding-left: 2%;
   padding-right: 2%;
@@ -40,7 +49,7 @@ header {
   text-align:right;
 }
 
-/* Navigation style for header flexible layout */
+/* Navigation style for header flexible layout*/
 nav {
   display: flex;
   justify-content: flex-end;
@@ -55,19 +64,23 @@ nav a {
   color:var(--light);
 }
 
+/* this styles my profile image. */
 .profimage {
   height: 300px;
   width: auto;
 }
 
+/* side bar section was a struggle for me */
 aside {
   overflow:hidden;
   float:left;
   background: var(--pink);
   width: 250px;
   bottom: 0;
+  color: var(--light);
 }
 
+/* in progress - making text style vertically vs horizontally */
 .asidemenu {
   flex-direction: column;
   justify-content: flex-end;
@@ -77,7 +90,7 @@ aside {
   
   }
 
-
+/* this is the grid section styled to be nested inside the previous flex container */
 section {
     position:relative;
     float:right;
@@ -86,7 +99,7 @@ section {
     padding: var(--padding);
   }
 
-/* This flex grid allows me to position my portfolio properly */
+/* This flex grid to create the desired layout for porfolio of work */
 .grid {
   display: grid;
   grid-template-columns: auto auto;
@@ -94,22 +107,17 @@ section {
   grid-gap: 10px;
   background-color: var(--light);
   padding: 10px;
+  text-decoration: none;
 }
 
+/* grid inside formatting */
 .grid > div {
     background-color:white;
-    text-align: center;
+    text-align: right;
+    text-decoration: none;
     padding: var(--padding);
-    font-size: 30px;
+    font-size: 2rem;
   }
-a:active {
-  background-color: var(--pink);
-}
-
-li a:hover {
-  background-color: #555;
-  color: white;
-}
 
 .floatleft {
   float: left;
@@ -119,6 +127,7 @@ li a:hover {
   float:none;
 }
 
+/* grid formatting may be overkill - I had trouble getting items to fit */
 .photo1 {
   grid-column-start:1;
   grid-column-end:3;
@@ -129,8 +138,30 @@ li a:hover {
   max-height: 300px;
   border: 1px solid --light;
   padding:var(--padding);
-  display:block;
+  display:inline-block;
+}
 
+.photo1 > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.photo2 > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+/* image becomes responsive with mouse with hover */
+/* I would like 1 class to work for muliple elements for hover tried to apply to grid */
+
+.photo1:hover {
+  background-color:var(--light);
+}
+
+.photo2:hover {
+  background-color:var(--light);
 }
 
 .photo2 {
@@ -142,12 +173,13 @@ li a:hover {
   display:block;
 }
 
-  /* revisit this */
+  /* footer formatting id like to put in the grid */
 footer {
   text-align:left;
   display: wrap;
   background: var(--black);
   color: var(--light);
+  text-decoration: none;
   }
 
  /* This media query section allows my styles to adjust by screen size */
