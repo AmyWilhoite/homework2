@@ -21,7 +21,7 @@ This work contains:
 
 
 ## Preview
-screenshot once complete
+![Screenshot](./assets/Preview.png)
 
 ## Links
 * my link
