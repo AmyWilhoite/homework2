@@ -13,7 +13,7 @@ My goals in this project are to deploy new skills while keeping in mind the user
 
 This work contains:
 * my previous work
-* my contact info, a recent photo or avatar, and links to sections about me, my work
+* my contact info, a recent  or avatar, and links to sections about me, my work
 * nav links correlate to corresponding sections
 * images link to corresponding work
 * css reset implemented 

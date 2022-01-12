@@ -149,7 +149,13 @@ section {
 
 .photo2 > img {
   object-fit: cover;
-  width: 100%;
+  width: 50%;
+  max-height: 100%;
+}
+
+.photo3 > img {
+  object-fit: cover;
+  width: 50%;
   max-height: 100%;
 }
 
@@ -164,9 +170,22 @@ section {
   background-color:var(--light);
 }
 
+.photo3:hover {
+  background-color:var(--light);
+}
+
 .photo2 {
   flex-direction: row;
-  width: 100%;
+  width: 75%;
+  min-height: 200px;
+  border: 1px solid --light;
+  padding:var(--padding);
+  display:block;
+}
+
+.photo3 {
+  flex-direction: row;
+  width: 75%;
   min-height: 200px;
   border: 1px solid --light;
   padding:var(--padding);

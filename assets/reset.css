@@ -1,5 +1,5 @@
 /* I believe I need a reset file for this homework
-this one is from class because I didnt have enough time to make one */
+this one is from class because I didnt have enough time to make one - I plan to update when i have more time*/
 /* Resets the box size of every element */
 * {
   margin: 0;
@@ -18,16 +18,6 @@ body {
   font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-}
-
-/* Matches the font of special elements to the rest of the page */
-input, select, option, optgroup, textarea, button,
-pre, code {
-  font-size: 100%;
-  font-family: inherit;
-}
 
 /* Removes default bullet points from lists */
 ol, ul {
